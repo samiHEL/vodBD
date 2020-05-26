@@ -20,14 +20,14 @@
 		  </div>
 		    <?php
 			if(isset($_POST['submit'])){
-				$bd  = new PDO( 'pgsql:host=localhost;dbname=vod', 'etudiant' , '' ) ;
-				try {    $bd = new PDO( 'pgsql:host=localhost;dbname=vod', 'etudiant' , '' ) ; 
+				$bd  = new PDO( 'pgsql:host=localhost;dbname=vod', 'postgres' , 'sasa' ) ;
+				try {    $bd = new PDO( 'pgsql:host=localhost;dbname=vod', 'postgres' , 'sasa' ) ; 
 				} 
 				catch ( PDOException $e ) {
 					die( 'Erreur : ' . $e->getMessage() ) ; 
 				}
 				$title=$_POST['titre'];
-				$delete = $db->prepare("DELETE FROM vod WHERE titre=$title");
+				$delete = $db->prepare("DELETE FROM Film WHERE titre=$title");
 				$delete->execute();
 				
 						
