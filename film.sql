@@ -15,18 +15,18 @@
 
 CREATE TABLE Film (
 
-    num_film integer NOT NULL,
+    num_film INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     titre character varying(50),
     annee integer NOT NULL,
     realisateur character varying(50)
     
 );
 
-INSERT INTO Film VALUES (1, 'Blood Brother', 2018, 'John Pogue ');
-INSERT INTO Film VALUES (2, 'Okja', 2017, 'Bong Joon Ho');
-INSERT INTO Film VALUES (3, 'Invincible', 2014, 'Angelina Jolie');
-INSERT INTO Film VALUES (4, 'Colombiana', 2011, 'Olivier Megaton');
-INSERT INTO Film VALUES (5, 'Inception', 2010, 'Christopher Nolan');
+INSERT INTO Film(titre,annee,realisateur) VALUES ('Blood Brother', 2018, 'John Pogue ');
+INSERT INTO Film(titre,annee,realisateur) VALUES ('Okja', 2017, 'Bong Joon Ho');
+INSERT INTO Film(titre,annee,realisateur) VALUES ('Invincible', 2014, 'Angelina Jolie');
+INSERT INTO Film(titre,annee,realisateur) VALUES ('Colombiana', 2011, 'Olivier Megaton');
+INSERT INTO Film(titre,annee,realisateur) VALUES ('Inception', 2010, 'Christopher Nolan');
 
 
 
