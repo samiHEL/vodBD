@@ -21,8 +21,8 @@
 		  </div>
 		  <h1>Liste des films</h1><br/>
 		  <?php 
-			$bd  = new PDO( 'pgsql:host=localhost;dbname=vod', 'etudiant' , '' ) ;
-			try {    $bd = new PDO( 'pgsql:host=localhost;dbname=vod', 'etudiant' , '' ) ; 
+			$bd  = new PDO( 'pgsql:host=localhost;dbname=vod', 'postgres' , 'sasa' ) ;
+			try {    $bd = new PDO( 'pgsql:host=localhost;dbname=vod', 'postgres' , 'sasa' ) ; 
 			} 
 			catch ( PDOException $e ) {
 				   die( 'Erreur : ' . $e->getMessage() ) ; 
@@ -31,7 +31,10 @@
 			$resultat = $bd->query( $sql ) ;
 			$lignes = $st->fetchAll( PDO::FETCH_ASSOC ) ;
 			for( $lignes as $uneLigne ){   
-				 echo $uneLigne[ 'annee' ] ;  
+				 echo $uneLigne[ 'titre' ] ;
+				 echo $uneLigne[ 'annee' ] ; 
+				 echo $uneLigne[ 'realisateur' ] ;
+				
 			}
 			?>
 		 
